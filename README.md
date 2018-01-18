@@ -23,8 +23,22 @@ This project aims to simplify, modernise, and break up Prairie.
 You'll need to have `AllowOverride All` for the install directory in your Apache config
 and the `rewrite` Apache extension enabled.
 
-### Composer
-
 If you haven't already, [install Composer](https://getcomposer.org/doc/00-intro.md).
 
-This section: when Packagist support is added
+Then run `php composer.phar install-project keythkatz/barrens ` to install it into
+a folder `barrens` or `php composer.phar install-project keythkatz/barrens [install directory]` to install
+it into a folder of your choice.
+
+Point your domain to the `public/` folder.
+
+At this point you should see a "Hey, it works!" message on your homepage.
+
+## Usage
+
+### Your code
+
+Your code (should) live in the `src/` folder.
+
+### Routing
+
+TODO
