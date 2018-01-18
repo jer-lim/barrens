@@ -3,6 +3,7 @@
 	"description": "Simple Lightweight Routing PHP Framework.",
 	"type": "project",
 	"keywords": ["framework"],
+	"homepage": "https://github.com/keythkatz/barrens",
 	"license": "MIT",
 	"authors": [
 		{

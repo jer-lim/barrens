@@ -20,7 +20,11 @@ This project aims to simplify, modernise, and break up Prairie.
 
 ## Setup
 
-You'll need to have **AllowOverride All** enabled for the install directory in Apache
-and the **Rewrite** Apache extension enabled.
+You'll need to have `AllowOverride All` for the install directory in your Apache config
+and the `rewrite` Apache extension enabled.
 
-TODO - Composer
+### Composer
+
+If you haven't already, [install Composer](https://getcomposer.org/doc/00-intro.md).
+
+This section: when Packagist support is added
