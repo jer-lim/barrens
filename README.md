@@ -33,6 +33,11 @@ Point your domain to the `public/` folder.
 
 At this point you should see a "Hey, it works!" message on your homepage.
 
+### .htaccess, Images, CSS and JS
+
+By default, URLs ending in an image format, `.css` and `.js` are not handled by the router, and are served by files in the `public/` directory.
+You can modify the `public/.htaccess` file to add/remove extensions.
+
 ## Usage
 
 ### Your code
@@ -41,4 +46,19 @@ Your code (should) live in the `src/` folder.
 
 ### Routing
 
-TODO
+The router initialises an instance of the specified class, then calls the function provided.
+
+To add a route, modify the `routes.php` file. An example has been provided.
+
+In general, to add a route:
+```
+	Route::[verb]([full path], [full class name to initialise], [function to call]);
+	// [verb] = get, post, put, patch, delete, head, options
+```
+
+Use `Route::cli(...)` for command line-only access.
+
+#### Parameters
+
+In the path, you can use `{paramName}` to indicate a parameter. These will be passed as an array into the provided function.
+Example: `Route::get("/from/{from}/to/{to}", "\Example", "main")` will pass `["from" => ..., "to" => ...]` into `\Example->main($params)`.
