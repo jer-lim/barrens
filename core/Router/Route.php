@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Barrens\Router;
+namespace KeythKatz\Barrens\Router;
 
-class Route {
+class Route
+{
 
 	private static $routes = [];
 

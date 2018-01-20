@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use \Barrens\Router\Route;
+use KeythKatz\Barrens\Router\Route;
 
 /**
  * Front facing:
