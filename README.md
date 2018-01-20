@@ -6,8 +6,7 @@ have probably already done before.
 
 ## Why Use It
 
-I have no idea. I use it for my prior projects in the form of [Prairie](https://github.com/keythkatz/prairie).
-This project aims to simplify, modernise, and break up Prairie.
+You want a framework that does nothing and that you don't have to do a lot of setup for.
 
 ## Features
 - Quick install
