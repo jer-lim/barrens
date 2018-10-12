@@ -19,13 +19,23 @@ You want a framework that does nothing and that you don't have to do a lot of se
 
 ## Setup
 
-You'll need to have `AllowOverride All` for the install directory in your Apache config
-and the `rewrite` Apache extension enabled.
+Run `sudo a2enmod rewrite` to enable the `rewrite` Apache extension.
+
+Edit your `apache2.conf` and add this:
+```
+<Directory /var/www/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+        Require all granted
+</Directory>
+```
 
 If you haven't already, [install Composer](https://getcomposer.org/doc/00-intro.md).
 
-Then run `php composer.phar install-project keythkatz/barrens ` to install it into
-a folder `barrens` or `php composer.phar install-project keythkatz/barrens [install directory]` to install
+Then run `php composer.phar install-project keythkatz/barrens .` to install it into
+the current folder or `php composer.phar install-project keythkatz/barrens [install directory]` to install
 it into a folder of your choice.
 
 Point your domain to the `public/` folder.
