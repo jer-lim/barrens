@@ -136,9 +136,9 @@ class Route
 	 * Handle routing once all routes have been set. Calls the appropriate function.
 	 */
 	public static function handleRoute(): void
-	{	
+	{
 		// Fetch path from request / CLI input
-		if (isset($_SERVER['argc'])) {
+		if (isset($_SERVER['argc']) && $_SERVER['argc'] > 0) {
 			$rawPath = $_SERVER['argv'][1]; // CLI
 		} else {
 			$rawPath = $_SERVER['REQUEST_URI'];
@@ -188,7 +188,7 @@ class Route
 			// Call appropriate entry by checking the method
 			$found = false;
 			foreach ($routes as $route) {
-				if (!isset($_SERVER['argc'])) {
+				if (!isset($_SERVER['argc']) || $_SERVER['argc'] == 0) {
 					if ($route->method === $_SERVER['REQUEST_METHOD'] && $_SERVER['REQUEST_METHOD'] !== "CLI") {
 						$found = true;
 						self::callFunction($route->entryClass, $route->entryFunction, $parameters);
